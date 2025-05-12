@@ -17,9 +17,9 @@
 ## 📁 Project Structure
 
 BoltDns/
-├── main.c # Main UDP server loop
-├── main.h # DNS structs and parsing logic
-└── README.md # Project documentation
+├── main.c # Main UDP server loop  
+├── main.h # DNS structs and parsing logic  
+└── README.md # Project documentation  
 
 ---
 
@@ -36,11 +36,11 @@ BoltDns/
 
 ## 🧪 Sample Output
 
-UDP Echo Server listening on port 53...
-TransactionId: 0xabcd
-Questions: 1
-qname: example.com, qtype: 1, qclass: 1
-received size: 42
+UDP Echo Server listening on port 53...  
+TransactionId: 0xabcd  
+Questions: 1  
+qname: example.com, qtype: 1, qclass: 1  
+received size: 42  
 
 
 ---
