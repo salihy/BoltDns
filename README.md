@@ -16,7 +16,7 @@
 
 ## 📁 Project Structure
 
-BoltDns/
+BoltDns/  
 ├── main.c # Main UDP server loop  
 ├── main.h # DNS structs and parsing logic  
 └── README.md # Project documentation  
