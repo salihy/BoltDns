@@ -58,4 +58,34 @@ received size: 42
 ```bash
 gcc -o BoltDns main.c
 sudo ./BoltDns
+```
+
+## 🧬 DNS Packet Format  
+
+BoltDns handles these DNS sections:  
+
+- DNSHeader – ID, flags, counts (packed struct)
+- DNSHeaderFlags – uses bitfields for parsing flags
+- DNSQuestion – domain name, type, and class
+- DNSAnswer – A record with TTL and IP address
+All fields are converted with ntohs() and htons() where appropriate to handle network-to-host byte order.
+
+## ⚠️ Limitations  
+
+- Only supports A (IPv4) record queries
+- Only handles one question per query
+- IP in response is static (10.0.0.11)
+- No support for recursion, caching, or NS/AR sections
+
+## 🔬 Testing
+Use dig or nslookup:  
+
+```bash
+dig @127.0.0.1 example.com
+```
+Expected response: A record pointing to 10.0.0.11.  
+
+## 📄 License
+MIT License
+
 
